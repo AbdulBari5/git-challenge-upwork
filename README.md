@@ -16,3 +16,15 @@ How to attempt this challenge:
 4) Set your new repo as the origin: `git remote set-url origin ${your repo url}`
 5) Push your solution to your repo
 You must follow these steps for your solution to be accepted -- forks or other methods will not be considered.
+
+
+## Solution
+Steps I used to solved the following task:
+1- First I checkout the add-echo branch using:
+  ``` git checkout -b add-echo origin/add-echo ```
+2- Then I rebase the add-echo branch to master
+  ``` git rebase master ```
+3- In the end I cherry pick the commit which I need on top of master branch
+  ``` git cherry-pick <commit-hash> ```
+The same three steps were repeated to copy add-reverse branch commit on master.
+One thing I faced while rebasing the add-reverse to master was merge conflicts. they were arrived because of some changes made to master after cherry-picking add-reverse branch.
